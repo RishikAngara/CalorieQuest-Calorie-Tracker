@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg"
+            android:contentDescription="Background Image" />
+
+        <!-- Semi-transparent overlay -->
+
+        <!-- Heading in the center -->
+        <TextView
+            android:id="@+id/headingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="Food Clasifier"
+            android:textSize="50sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp" />
+
+        <!-- ImageView to display the image -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="Image Display"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/darker_gray"
+            android:padding="8dp" />
+
+        <!-- Button to capture image -->
+        <Button
+            android:id="@+id/openbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:text="Capture Image" />
+
+        <!-- Button to import image from gallery -->
+        <Button
+            android:id="@+id/gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:text="Import from Gallery" />
+
+        <!-- TextView to display prediction result -->
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/openbutton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
