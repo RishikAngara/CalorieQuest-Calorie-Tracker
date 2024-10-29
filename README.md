@@ -1,1 +1,1 @@
-# IFC-Indian-Food-Classifier
+# CalorieQuest: Calorie Tracker
